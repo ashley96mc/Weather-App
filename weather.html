@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="src/style.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="app">
+            <h1 id="displayedCity">Biddeford</h1>
+            <h2 id="date-time">Tuesday 20:52pm</h2>
+
+            <div class="row">
+                <div class="col-6">
+                    <ul>
+                        <li id="today-emoji">🌨</li>
+                        <li id="today-description">Winter Storm</id>
+                        </li>
+                        <li>
+                            <span id="temperature"><em>3</em></span>
+                            <span id="temperature-unit">°C</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-6">
+                    <ul class="weather-description">
+                        <li>
+                            <span id="humidity-description"><em>Humidity:</em></span>
+                            <span id="humidity">90%</span>
+                            <span id="humidity-unit">%</span>
+                        </li>
+
+                        <li>
+                            <span id="wind-description"><em>Wind:</em></span>
+                            <span id="wind">10</span>
+                            <span id="wind-speed-unit">km/h</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <form id="search-form">
+                <input type="text" placeholder="Enter a city" id="search-text-input">
+                <input type="submit" value="✈️">
+            </form>
+            <button id="current-location-button">Current Location</button>
+            <br>
+
+            <div class="row forecast">
+                <div class="col-2">
+                    <ul class="forecast">
+                        <li>Monday</li>
+                        <li>🌧</li>
+                        <li><strong>25°</strong>/13°</li>
+                    </ul>
+                </div>
+                <div class="col-2">
+                    <ul class="forecast">
+                        <li>Tuesday</li>
+                        <li>🌦</li>
+                        <li><strong>20°</strong>/7°</li>
+                    </ul>
+                </div>
+                <div class="col-2">
+                    <ul class="forecast">
+                        <li>Wednesday</li>
+                        <li>🌨</li>
+                        <li><strong>20°</strong>/7°</li>
+                    </ul>
+                </div>
+                <div class="col-2">
+                    <ul class="forecast">
+                        <li>Thursday</li>
+                        <li>🌤</li>
+                        <li><strong>35°</strong>/17°</li>
+                    </ul>
+                </div>
+                <div class="col-2">
+                    <ul class="forecast">
+                        <li>Friday</li>
+                        <li>☀️</li>
+                        <li><strong>36°</strong>/20°</li>
+                    </ul>
+                </div>
+                <div class="col-2">
+                    <ul class="forecast">
+                        <li>Saturday</li>
+                        <li>❄️</li>
+                        <li><strong>20°</strong>/4°</li>
+                    </ul>
+                </div>
+
+                </ul>
+            </div>
+        </div>
+
+
+
+    </div>
+    </div>
+    <script src="src/script.js"></script>
+</body>
+
+</html>
