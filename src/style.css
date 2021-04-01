@@ -56,3 +56,7 @@ ul {
 #today-description {
   font-size: 25px;
 }
+#link-to-github {
+  text-align: center;
+  font-size: 12px;
+}
