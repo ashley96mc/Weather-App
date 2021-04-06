@@ -1,15 +1,16 @@
 body {
   margin-top: 10px;
+  font-family: "Raleway", sans-serif;
 }
-.container {
+.app {
   background: linear-gradient(to top, #d1fad1 0%, #7ecdf1 100%);
-  max-width: 700px;
+  max-width: 600px;
   border-radius: 5px;
   box-shadow: black 2px 2px 2px;
+  margin: 0 auto;
 }
 h1 {
   font-size: 70px;
-  font-family: "Raleway", sans-serif;
   color: rgb(54, 89, 202);
   text-align: center;
   padding: 5px;
@@ -17,31 +18,28 @@ h1 {
 }
 h2 {
   text-align: center;
-  font-family: "Raleway", sans-serif;
   font-size: 30px;
   padding: 0;
   margin-bottom: 50px;
 }
 ul {
-  font-family: "Raleway", sans-serif;
   font-weight: 500;
   text-align: center;
   list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 .row .forecast {
   font-size: 17px;
   text-align: center;
-  padding: 0;
 }
 .weather-description {
   font-size: 20px;
-  line-height: 70px;
   margin-top: 35px;
 }
 #current-location-button {
   margin: 0 auto;
   display: block;
-  font-family: "Raleway", sans-serif;
   background-color: rgb(54, 89, 202);
   color: white;
 }
@@ -50,11 +48,15 @@ ul {
   margin: 30px;
   text-align: center;
 }
+#today-temperature #temperature {
+  font-size: 30px;
+}
+
 #today-emoji {
   font-size: 80px;
 }
 #today-description {
-  font-size: 25px;
+  font-size: 20px;
 }
 #link-to-github {
   text-align: center;
