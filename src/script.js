@@ -36,6 +36,15 @@ function showWeather(response) {
   );
   document.querySelector("#today-description").innerHTML =
     response.data.weather[0].main;
+
+  document.querySelector("#today-temperature-high").innerHTML = Math.round(
+    response.data.main.temp_max);
+
+  document.querySelector("#today-temperature-low").innerHTML = Math.round(
+    response.data.main.temp_min);
+    
+  let iconElement = document.querySelector ("#icon");
+  iconElement.setAttribute ("src",`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
 }
 
 function searchCity(city) {
