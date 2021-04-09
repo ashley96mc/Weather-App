@@ -45,6 +45,8 @@ function showWeather(response) {
     
   let iconElement = document.querySelector ("#icon");
   iconElement.setAttribute ("src",`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+
+ 
 }
 
 function searchCity(city) {
@@ -80,4 +82,6 @@ function showPosition(event) {
 
 let currentLocationButton = document.querySelector("#current-location-button");
 currentLocationButton.addEventListener("click", showPosition);
+
+
 

@@ -48,8 +48,11 @@ ul {
   margin: 30px;
   text-align: center;
 }
-#today-temperature #temperature {
+#today-temperature {
   font-size: 50px;
+}
+#temperature-unit {
+  font-size: 30px;
 }
 
 #today-emoji {
