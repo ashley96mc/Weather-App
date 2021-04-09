@@ -3,7 +3,7 @@ body {
   font-family: "Raleway", sans-serif;
 }
 .app {
-  background: linear-gradient(to top, #d1fad1 0%, #7ecdf1 100%);
+  background-image: url("https://images.unsplash.com/photo-1514454529242-9e4677563e7b?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80");
   max-width: 600px;
   border-radius: 5px;
   box-shadow: black 2px 2px 2px;
@@ -11,6 +11,7 @@ body {
 }
 h1 {
   font-size: 70px;
+  font-weight: 800;
   color: rgb(54, 89, 202);
   text-align: center;
   padding: 5px;
@@ -48,13 +49,12 @@ ul {
   margin: 30px;
   text-align: center;
 }
-#today-temperature {
-  font-size: 50px;
-}
 #temperature-unit {
   font-size: 30px;
 }
-
+#today-temperature {
+  font-size: 50px;
+}
 #today-emoji {
   font-size: 80px;
 }
