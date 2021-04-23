@@ -22,6 +22,33 @@ let days = [
 let day = days[now.getDay()];
 h2.innerHTML = `${day}, ${hours}:${minutes}`;
 
+function displayForecast(){
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row">`;
+  let weekDays = ["Thu", "Fri", "Sat", "Sun"];
+  weekDays.forEach(function(day) {
+
+  
+
+  forecastHTML = 
+    forecastHTML +
+    `
+      <div class="col-2">
+          <ul class="forecast">
+                <li class = "weather-forecast-date">${day}</li>
+                <li>🌧</li>
+                <li><strong>25°</strong>/13°</li>
+          </ul>
+      </div>
+    `;
+  });
+  
+    forecastHTML = forecastHTML + `</div>`;
+    forecastElement.innerHTML = forecastHTML;
+  
+}
+
 
 function showWeather(response) {
   document.querySelector(
@@ -45,8 +72,7 @@ function showWeather(response) {
     
   let iconElement = document.querySelector ("#icon");
   iconElement.setAttribute ("src",`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
-
- 
+  
 }
 
 function searchCity(city) {
@@ -55,6 +81,7 @@ function searchCity(city) {
   axios.get(apiUrl).then(showWeather);
 }
 searchCity("Biddeford");
+displayForecast();
 
 
 function cityInput(event) {
