@@ -1,34 +1,34 @@
-let now = new Date();
-let h2 = document.querySelector("h2");
+function formatDate(timestamp){
 
-let hours = now.getHours();
-if (hours < 10) {
+  let date = new Date(timestamp);
+
+  let hours = date.getHours();
+  if (hours < 10) {
   hours = `0${hours}`;
-}
-let minutes = now.getMinutes();
-if (minutes < 10) {
-  minutes = `0${minutes}`;
-}
+    }
+  let minutes = date.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+    }
 
-let days = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday"
-];
-let day = days[now.getDay()];
-h2.innerHTML = `${day}, ${hours}:${minutes}`;
-
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday"
+  ];
+  let day = days[date.getDay()];
+  return `${day} ${hours}:${minutes}`;
+}
 
 function formatDay(timestamp){
-  let date = new Date(timestamp + 1000);
+  let date = new Date(timestamp * 1000);
   let day = date.getDay();
   let days = ["Sun", "Mon", "Tues", "Wed", "Thu", "Fri", "Sat"]; 
   return days[day];
-
 }
 
 function displayForecast(response){
@@ -40,8 +40,6 @@ function displayForecast(response){
   
   forecast.forEach(function(forecastDay, index) 
   { if (index <6) {
-
-  
 
   forecastHTML = 
     forecastHTML +
@@ -55,7 +53,7 @@ function displayForecast(response){
                         alt = ""
                         width = "42"
                 </li>
-                <li><span class = "forecast-temperature-max"<strong>${Math.round(forecastDay.temp.max)}°</strong>
+                <li><span class = "forecast-temperature-max">${Math.round(forecastDay.temp.max)}°
                     <span class = "forecast-temperature-min">/${Math.round(forecastDay.temp.min)}°</span></li>
           </ul>
       </div>
@@ -98,10 +96,10 @@ function showWeather(response) {
   let iconElement = document.querySelector ("#icon");
   iconElement.setAttribute ("src",`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
 
-  getForecast(response.data.coord);
-  
+  let dateElement = document.querySelector("#date-time");
+  dateElement.innerHTML = formatDate(response.data.dt * 1000);
 
-
+ getForecast(response.data.coord);
 }
 
 function searchCity(city) {
@@ -109,9 +107,8 @@ function searchCity(city) {
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(showWeather);
 }
+
 searchCity("Biddeford");
-
-
 
 function cityInput(event) {
   event.preventDefault();
@@ -121,7 +118,6 @@ function cityInput(event) {
 
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", cityInput);
-
 
 function getCurrentLocation(position) {
     let latitude = position.coords.latitude;

@@ -3,7 +3,7 @@ body {
   font-family: "Raleway", sans-serif;
 }
 .app {
-  background-image: url("https://images.unsplash.com/photo-1514454529242-9e4677563e7b?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80");
+  background-image: url("https://images.unsplash.com/photo-1490735891913-40897cdaafd1?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDR8fHN1bnJpc2V8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60");
   max-width: 600px;
   border-radius: 5px;
   box-shadow: black 2px 2px 2px;
@@ -12,16 +12,16 @@ body {
 h1 {
   font-size: 70px;
   font-weight: 800;
-  color: rgb(54, 89, 202);
+  color: black;
   text-align: center;
   padding: 5px;
+  opacity: 0.5;
   margin-top: 30px;
 }
 h2 {
   text-align: center;
-  font-size: 30px;
+  font-size: 25px;
   padding: 0;
-  margin-bottom: 50px;
 }
 ul {
   font-weight: 500;
@@ -30,6 +30,13 @@ ul {
   margin: 0;
   padding: 0;
 }
+.forecast-temperature-max {
+  font-weight: 800;
+}
+.forecast-temperature-min {
+  font-weight: 100;
+}
+
 .row .forecast {
   font-size: 17px;
   text-align: center;
@@ -41,8 +48,11 @@ ul {
 #current-location-button {
   margin: 0 auto;
   display: block;
-  background-color: rgb(54, 89, 202);
+  background-color: #d37881;
   color: white;
+}
+#date-time {
+  font-style: italic;
 }
 
 #search-form {
